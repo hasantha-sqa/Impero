@@ -33,7 +33,6 @@ public class BaseTest
     public void quitDriver()
     {
         Allure.step( "Quit Browser" );
-        driver.close();
         driver.quit();
     }
 

@@ -2,7 +2,11 @@ package org.impero.base;
 
 import org.impero.pages.HomePage;
 import org.impero.pages.ResultsPage;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+
+import java.time.Duration;
 
 public class WebPage
 {
@@ -11,8 +15,13 @@ public class WebPage
 
     public WebPage( WebDriver driver )
     {
-        homePage = new HomePage( driver );
-        resultsPage = new ResultsPage( driver );
+        FluentWait<WebDriver> fluentWait = new FluentWait<>( driver )
+                                                   .withTimeout( Duration.ofSeconds( 15 ) )
+                                                   .pollingEvery( Duration.ofSeconds( 1 ) )
+                                                   .ignoring( NoSuchElementException.class );
+
+        homePage = new HomePage( driver, fluentWait );
+        resultsPage = new ResultsPage( driver, fluentWait );
     }
 
     public HomePage getHomePage()
@@ -24,4 +33,5 @@ public class WebPage
     {
         return resultsPage;
     }
+
 }
