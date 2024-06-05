@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Google Search Test">
+    <test verbose="2" preserve-order="true" name="Google Search with Keywords for Images">
+        <classes>
+            <class name="org.impero.testcases.GoogleSearchTest">
+                <methods>
+                    <include name="verifyGoogleSearchForImages"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
