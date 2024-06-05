@@ -61,9 +61,4 @@ public class BaseTest
         driver.manage().timeouts().pageLoadTimeout( Duration.ofSeconds( TestUtil.PAGE_LOAD_TIMEOUT ) );
         driver.manage().timeouts().implicitlyWait( Duration.ofSeconds( TestUtil.IMPLICIT_WAIT ) );
     }
-
-    public WebDriver getDriver()
-    {
-        return driver;
-    }
 }
