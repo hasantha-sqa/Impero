@@ -2,7 +2,7 @@ package org.impero.testcases;
 
 import com.google.gson.JsonObject;
 import org.impero.base.BaseTest;
-import org.impero.listner.TestListener;
+import org.impero.listener.TestListener;
 import org.impero.util.JsonDataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
