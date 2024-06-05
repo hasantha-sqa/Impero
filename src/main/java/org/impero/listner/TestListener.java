@@ -6,8 +6,6 @@ import org.impero.util.TestUtil;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import java.io.IOException;
-
 public class TestListener extends BaseTest implements ITestListener
 {
     @Override
